@@ -1,0 +1,15 @@
+%p.notice
+  = notice
+%h2
+  %span#vote_score
+    Score :
+    = @story.votes.size
+  = @story.name
+%p
+  %b
+    Link:
+  = @story.link
+#vote_form
+  = form_tag [@story, Vote.new], :remote => true do
+    = submit_tag 'shove it'
+= link_to 'Back', stories_path

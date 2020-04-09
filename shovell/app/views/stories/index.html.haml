@@ -1,0 +1,6 @@
+%h1 Stories
+= link_to 'New Stories', new_story_path
+%br/
+= @story.name
+%div :
+= link_to @story.link, story_path(@story)
